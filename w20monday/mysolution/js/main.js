@@ -1,13 +1,17 @@
 "use strict";
 
-setTimeout(function(){
-    document.getElementById('window').style.left = '40px';
-}, 300);
+let ckw = document.querySelector("#window");
 
-var close = document.querySelectorAll("#close");
+//Loading Window
 
-close.forEach(function(div){
-    div.addEventListener("click", function(){
-        document.getElementById('window').style.left = '-100%';
-    })
-})
+window.addEventListener("load",function(){
+    ckw.style.left = '40px';
+});
+
+//Click on the button
+
+let button = document.querySelector("#close");
+
+button.addEventListener("click",function(){
+    ckw.style.left = '-100%';
+});
